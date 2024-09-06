@@ -1,6 +1,9 @@
 print("\n")
 
-a, b = map(int, input("I shall tell you the gcd of two integers a and b. You shall type your a,b: ").split(','))
+aa, bb = map(int, input("I shall tell you the gcd of two integers a and b. You shall type your a,b: ").split(','))
+
+a = abs(aa)
+b = abs(bb)
 
 print("\n")
 
@@ -18,7 +21,7 @@ def euclidal(a, b):
         big = a
     
     ablist = []
-    rd = 1
+    rd = 0
 
     while True:
         pastrd = rd
@@ -31,7 +34,7 @@ def euclidal(a, b):
         ablist.append([pastbig, big, rd, multiple])
 
         if rd == 0:
-           return ablist, pastrd
+           return ablist, big
         
 process, gcd = euclidal(a, b)
 
@@ -48,7 +51,7 @@ for i in process:
 
 print("\n")
 
-print(f"the gcd of {a} and {b} is {gcd}")
+print(f"the gcd of {aa} and {bb} is {gcd}")
 
 print("\n")
 
@@ -60,4 +63,3 @@ print("\n")
 
 
    
-
